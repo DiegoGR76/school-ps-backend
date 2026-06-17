@@ -5,6 +5,7 @@ import time
 import urllib.parse
 from pathlib import Path
 from typing import Any
+import requests
 
 import pdfplumber
 from playwright.sync_api import sync_playwright
@@ -115,10 +116,6 @@ class WebcolegiosScraperAdapter:
             return WebcolegiosScrapeResult(students=students, teachers=teachers)
 
     def _authenticate_requests(self, url: str, usuario: str, contrasena: str):
-        try:
-            import requests
-        except ImportError as exc:
-            raise RuntimeError("requests no esta instalado.") from exc
 
         session = requests.Session()
         session.headers.update(
