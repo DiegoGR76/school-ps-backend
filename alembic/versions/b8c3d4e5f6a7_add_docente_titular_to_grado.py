@@ -1,7 +1,7 @@
 """add docente titular to grado
 
 Revision ID: b8c3d4e5f6a7
-Revises: a7f2c9d8e4b1
+Revises: 
 Create Date: 2026-06-09 00:00:00.000000
 
 """
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 from alembic import op
 
 revision: str = "b8c3d4e5f6a7"
-down_revision: str | None = "a7f2c9d8e4b1"
+down_revision: str | None = None
 branch_labels: str | Sequence[str] | None = None
 depends_on: str | Sequence[str] | None = None
 
